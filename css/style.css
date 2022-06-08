@@ -44,7 +44,7 @@ main{
     font-size: 1.5em;;
 }
 .item{
-    min-width: 45%;
+    width: 45%;
     background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
