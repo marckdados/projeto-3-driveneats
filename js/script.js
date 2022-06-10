@@ -9,6 +9,8 @@ let sobremesa;
 let valorPrato;
 let valorBebida;
 let valorSobremesa;
+let total;
+let url;
 
 
 function selecionarItem1(elemento){
@@ -96,4 +98,26 @@ function converterPreco(preco){
     let valor = preco.slice(3);
     valor = valor.replace(",",".");
     return Number(valor);
+}
+
+function atualizarTabela(){
+    total = valorPrato+valorBebida+valorSobremesa;
+    document.querySelector('.tabela-prato').innerHTML = prato;
+    document.querySelector('.preco-prato').innerHTML = valorPrato.toFixed(2);
+    document.querySelector('.tabela-bebida').innerHTML = bebida;
+    document.querySelector('.preco-bebida').innerHTML = valorBebida.toFixed(2);
+    document.querySelector('.tabela-sobremesa').innerHTML = sobremesa;
+    document.querySelector('.preco-sobremesa').innerHTML = valorSobremesa.toFixed(2);
+    document.querySelector('.total').innerHTML = total.toFixed(2);
+}
+
+function enviarPedido(elemento){
+    let nome = prompt('Qual seu nome ?');
+    let endereco = prompt('Qual sua rua e número?')
+    let str = 
+    `
+    Olá, gostaria de fazer o pedido:\n- Prato: ${prato}\n- Bebida: ${bebida}\n- Sobremesa: ${sobremesa}\nTotal: R$ ${total.toFixed(2)}\n\n\nNome: ${nome}\nEndereço: ${endereco}
+    `
+    url = encodeURIComponent(str);
+    elemento.setAttribute('href',`https://wa.me/5583993395820?text=${url}`)
 }

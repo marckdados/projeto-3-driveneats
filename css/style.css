@@ -7,6 +7,9 @@ body{
     font-family: "Roboto";
     background-color: #E5E5E5;
 }
+a{
+    text-decoration: none;
+}
 
 header{
     width: 100%;
@@ -138,10 +141,12 @@ footer{
     font-weight: 700;
     margin: 10px 0;
 }
+.tela-pedido div:nth-child(5){
+    font-weight: 700;
+}
 .tela-pedido div:nth-child(6){  
     height: 40px;
     background-color: #FFFFFF;
-    color: #50D074;
     font-weight: 700;
     justify-content: center;
     align-items: center;
@@ -149,6 +154,11 @@ footer{
     font-size: 1.1em;
     border-radius: 20px;
 }
+
+.tela-pedido div a:nth-child(1){
+    color: #32B72F;
+}
+
 .tela-pedido div:nth-child(7){
     justify-content: center;
     font-weight: 700;
