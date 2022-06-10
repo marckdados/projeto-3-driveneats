@@ -106,6 +106,55 @@ footer{
     padding: 0 40px;
     text-align: center;
 }
+.fundo{
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.781);
+    top: 0;
+    left: 0;
+}
+.tela-pedido{
+    width: 90%;
+    background-color: #50D074;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+}
+.tela-pedido div{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 5px;
+}
+.tela-pedido h3{
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.tela-pedido div:nth-child(6){  
+    height: 40px;
+    background-color: #FFFFFF;
+    color: #50D074;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 1.1em;
+    border-radius: 20px;
+}
+.tela-pedido div:nth-child(7){
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
 .selecionado{
     border: 5px solid #32B72F;;
 }
@@ -126,4 +175,8 @@ footer{
 }
 .selecionado-botao{
     background-color: #32B72F;
+    cursor: pointer;
+}
+.esconder{
+    display: none;
 }

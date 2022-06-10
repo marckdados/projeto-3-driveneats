@@ -2,6 +2,7 @@ let pratoSelecionado;
 let bebidaSelecianado;
 let sobremesaSelecionado;
 let botao = document.querySelector('.botao');
+let botaoDisponivel;
 
 
 function selecionarItem1(elemento){
@@ -59,9 +60,19 @@ let checador = setInterval(()=>{
     if(pratoSelecionado === 1 && sobremesaSelecionado === 1 && bebidaSelecianado === 1){    
        botao.classList.add('selecionado-botao');
        botao.innerHTML = 'Fechar Pedido';
+       botaoDisponivel = true;
     }
     else{
         botao.classList.remove('selecionado-botao')
         botao.innerHTML = 'Selecione os 3 itens para fechar o pedido';
+        botaoDisponivel = false;
     }
-},1000)
+},1000);
+
+function fecharPedido(){
+    if(botaoDisponivel){
+        const fundo = document.querySelector('.fundo');
+        fundo.classList.toggle('esconder');
+    }
+}
+

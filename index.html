@@ -166,12 +166,40 @@
                 </li>
             </ul>
         </div>
+        <div class="fundo esconder">
+            <div class="tela-pedido">
+                <h3 class="titulo-pedido">Confirme seu pedido</h3>
+                <div>
+                    <span>Frango</span>
+                    <span>R$</span>
+                </div>
+                <div>
+                    <span>Frango</span>
+                    <span>R$</span>
+                </div>
+                <div>
+                    <span>Frango</span>
+                    <span>R$</span>
+                </div>
+                <div>
+                    <span>Frango</span>
+                    <span>R$</span>
+                </div>
+                <div>
+                    <span>Tudo certo, pode pedir!</span>
+                </div>
+                <div>
+                    <span onclick="fecharPedido()">Cancelar</span>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
-        <div class="botao">
+        <div onclick="fecharPedido()"class="botao">
             <span>Selecione os 3 itens para fechar o pedido</span>
         </div>
     </footer>
+    
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
