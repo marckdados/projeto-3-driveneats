@@ -111,7 +111,7 @@ function atualizarTabela(){
     document.querySelector('.total').innerHTML = total.toFixed(2);
 }
 
-function enviarPedido(elemento){
+function enviarPedido(){
     let nome = prompt('Qual seu nome ?');
     let endereco = prompt('Qual sua rua e número?')
     let str = 
@@ -119,5 +119,9 @@ function enviarPedido(elemento){
     Olá, gostaria de fazer o pedido:\n- Prato: ${prato}\n- Bebida: ${bebida}\n- Sobremesa: ${sobremesa}\nTotal: R$ ${total.toFixed(2)}\n\n\nNome: ${nome}\nEndereço: ${endereco}
     `
     url = encodeURIComponent(str);
-    elemento.setAttribute('href',`https://wa.me/5583993395820?text=${url}`)
+    redirecionar(`https://wa.me/5583993395820?text=${url}`);
 }
+
+function redirecionar(link){
+    window.open(link, "_blank")
+    }
